@@ -1,8 +1,12 @@
-// Java program to print all the permutations
-// of the given string
+/*
+ @author: Matt Hurt
 
-// Java Program to generate all permutations of a given set of
-// numbers.
+ Java program to print all the permutations
+ of the given string
+ Java Program to generate all permutations of a given set of
+ numbers.
+*/
+
 import java.util.Scanner;
 
 public class SumsToN {
