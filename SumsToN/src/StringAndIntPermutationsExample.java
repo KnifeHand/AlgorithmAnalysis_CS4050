@@ -9,7 +9,8 @@
 
 import java.util.Scanner;
 
-public class SumsToN {
+public class StringAndIntPermutationsExample
+{
 
 
         // Function counts the total number of digits in a number.
