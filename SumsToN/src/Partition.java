@@ -1,3 +1,5 @@
+import java.io.PrintStream;
+
 /******************************************************************************
  *  Compilation:  javac Partition
  *  Execution:    java Partition N
@@ -29,7 +31,9 @@
  *
  ******************************************************************************/
 
-public class Partition { 
+public class Partition {
+
+    private static PrintStream StdOut ;
 
     public static void partition(int n) {
         partition(n, n, "");
