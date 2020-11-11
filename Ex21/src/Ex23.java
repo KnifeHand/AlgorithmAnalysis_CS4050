@@ -7,8 +7,8 @@ import java.lang.*;
 class Ex23
 {
 
-    public static String gene1 = "AACAGTTACC";
-    public static String gene2 = "TAAGGTCA";
+    public static String gene1;
+    public static String gene2;
 
     // function to find out
 // the minimum penalty
@@ -168,6 +168,11 @@ class Ex23
     public static void main(String[] args)
     {
         // input strings
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the first gene sequence");
+        gene1 = scanner.nextLine();
+        System.out.println("Enter the second gene sequence");
+        gene2 = scanner.nextLine();
 
 
         // intialsing penalties
