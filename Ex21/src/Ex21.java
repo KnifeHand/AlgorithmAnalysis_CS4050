@@ -1,5 +1,8 @@
 // Java program to find out maximum value
 import java.io.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 class Ex21{
@@ -37,7 +40,8 @@ class Ex21{
                 if (F > L) {
                     table[i][j] = MV[i][j] + " (F)";
                 } else if (F == L) {
-                    table[i][j] = MV[i][j] + " (*)";
+                    // zero marks the beginning of the series?
+                    table[i][j] = MV[i][j] + " (0)";
                 } else {
                     table[i][j] = MV[i][j] + " (L)";
                 }
@@ -70,17 +74,6 @@ class Ex21{
             }
             System.out.println("\n");
         }
-    }
-    private static int[] getUserInput() {
-        List<Integer> numbers = new ArrayList<>();
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter some integers, separated by a space or comma, press enter twice to continue.");
-        String[] next = scanner.nextLine().split("[\\s,]");
-        int[] numArray = new int[next.length];
-        for (int i = 0; i < next.length; i++) {
-            numArray[i] = Integer.parseInt(next[i]);
-        }
-        return numArray;
     }
 
     static int optimalStrategy(int[] arr, int n)
@@ -128,21 +121,43 @@ class Ex21{
         }
     }
 
+    private static int[] getUserInput() {
+        //List<Integer> numbers = new ArrayList<>();
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter how many numbers you have to pick from: ");
+        int length =  scanner.nextInt();
+        int[] numArray = new int[length];
+        System.out.println("Please enter the numbers");
+        for (int i=0; i < length; i++) {
+            int userInput = scanner.nextInt();
+            numArray[i] = userInput;
+        }
+//        for (int i = 0; i < length; i++) {
+//            numArray[i] = Integer.parseInt(next[i]);
+//        }
+        return numArray;
+    }
+
     public static void main(String[] args)
     {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter how many numbers you have to pick from ");
-        int length = scanner.nextInt(); // n
-        int n = length;
-        int [] arr = new int[length];
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.println("Enter how many numbers you have to pick from ");
+//        int length = scanner.nextInt(); // n
+//        int n = length;
+//        int [] arr = new int[length];
+//
+//        System.out.println("Please enter the numbers");
+//        for (int i=0; i < length; i++){
+//            int userInput = scanner.nextInt();
+//            arr[i] = userInput;
+//        }
+//
+//        System.out.println("The optimal score is: " + optimalStrategy(arr, length));
+//        //printSolution(F);
 
-        System.out.println("Please enter the numbers");
-        for (int i=0; i < length; i++){
-            int userInput = scanner.nextInt();
-            arr[i] = userInput;
-        }
+        int[] A = getUserInput();
+        System.out.println(Arrays.toString(A) + "\n");
+        System.out.println("Max value to be selected by player 1 = [ " + solve(A) + " ]");
 
-        System.out.println("The optimal score is: " + optimalStrategy(arr, length));
-        //printSolution(F);
     }
 }
