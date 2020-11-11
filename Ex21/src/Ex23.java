@@ -144,31 +144,25 @@ class Ex23
 
     public static void print2D(int mat[][])
     {
-        System.out.print("\t");
+        System.out.print("\t-\t");
         for (int i = 0; i < gene2.length(); i++){
 
             System.out.print(gene2.charAt(i) + "\t");
         }
         System.out.println();
-
-//        for(int j = -1; j < gene1.length(); ++) {
-//            System.out.print(gene1.charAt(k) + " ");
-
-            for (int i = -1; i < gene1.length(); i++) {
-                for (int j = -1; j < gene2.length(); j++) {
-                    for(int x = 0; x < gene1.length(); x++){
-                        System.out.print(x);
-                    }
-                    System.out.print(mat[i + 1][j + 1] + "\t");
-                }
-                System.out.println();
+        for (int i=0; i <gene1.length()+1; i++){
+            if(i == 0){
+                System.out.print("-\t");
             }
+            else{
+                System.out.print(gene1.charAt(i-1)+"\t");
+            }
+            for (int j= 0; j < gene2.length()+1; j++){
+                System.out.print(mat[i][j]+"\t");
+            }
+            System.out.println();
         }
-    //}
-//
-//        // Loop through all rows
-//        for (int[] row : mat)
-//            System.out.println(Arrays.toString(row));//}
+    }
 
     // Driver code
     public static void main(String[] args)
