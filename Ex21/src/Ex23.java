@@ -1,3 +1,4 @@
+// Authors: Matt Hurt and Jorge Silva
 // Java program to implement
 // sequence alignment problem.
 import java.io.*;

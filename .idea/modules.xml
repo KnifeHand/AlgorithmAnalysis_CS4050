@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AlgorithmAnalysis_CS4050.iml" filepath="$PROJECT_DIR$/AlgorithmAnalysis_CS4050.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Karastuba/Karastuba.iml" filepath="$PROJECT_DIR$/Karastuba/Karastuba.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SumsToN/SumsToN.iml" filepath="$PROJECT_DIR$/SumsToN/SumsToN.iml" />
+    </modules>
+  </component>
+</project>
